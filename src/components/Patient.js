@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 
 function Patient({patient, handleDelete}) {
-    const [isDeceased, setIsDeceased] = useState(true)
-    const classy = isDeceased ? "alive" : "deceased"
+    const [isDeceased, setIsDeceased] = useState(patient.deceased)
+    const classy = isDeceased ? "deceased" : "alive"
     
     function checkDeceased () {
         setIsDeceased(!isDeceased)
